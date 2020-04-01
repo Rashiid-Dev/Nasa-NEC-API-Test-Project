@@ -10,6 +10,6 @@ namespace NasaNecApiTestProject
     public class AppConfigReader
     {
         public static readonly string BaseUrl = ConfigurationManager.AppSettings["base_url"];
-        public static readonly string ApiKey = ConfigurationManager.AppSettings["resource"];
+        public static readonly string Resource = ConfigurationManager.AppSettings["resource"];
     }
 }

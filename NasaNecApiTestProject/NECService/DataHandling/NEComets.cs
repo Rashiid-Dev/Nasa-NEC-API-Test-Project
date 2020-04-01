@@ -11,11 +11,11 @@ namespace NasaNecApiTestProject.NECService.DataHandling
     { 
 
 
-        public NECometsModel deser { get; set; }
+        public List<Rootobject> deser { get; set; }
 
         public void DeserializeInfo(string DeserResponse)
         {
-            deser = JsonConvert.DeserializeObject<NECometsModel>(DeserResponse);
+            deser = JsonConvert.DeserializeObject<List<Rootobject>>(DeserResponse);
         }
     }
 }
