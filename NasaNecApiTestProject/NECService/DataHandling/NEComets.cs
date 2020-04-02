@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace NasaNecApiTestProject.NECService.DataHandling
 {
-    class NEComets
+    public class NEComets
     { 
 
 

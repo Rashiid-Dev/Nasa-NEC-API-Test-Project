@@ -12,22 +12,11 @@ namespace NasaNecApiTestProject.ApiServiceTests
     {
         private SpecificCometService specificCometService = new SpecificCometService();
 
-        private string _julianDate = "tp_tdb";
-        private string _periphelion = "q_au_1";
-        private string _aphelion = "q_au_2";
-        private string _orbitalPeriod = "p_yr";
-        private string _eccentricity = "e";
-        private string _orbitalInclination = "i_deg";
-        private string _argumentOfPeriphelion = "w_deg";
-        private string _julianDateEpoch = "epoch_tdb";
-        private string _longitudeOfTheAscendingNode = "node_deg";
-        private string _reference = "ref";
-        private string _objectName = "object_name";
-
-        [Test]
-        public void Check5DBorsenObjectName()
+        [TestCase("object_name", "5D/Brorsen")]
+        public void Check5DBorsenObjectName(string key, string expectedresult)
         {
-            StringAssert.IsMatch("5D/Brorsen", (string)specificCometService.GetComet(0)[_objectName]);
+            var Brorsen = (string)specificCometService.GetComet(0)[key];
+            StringAssert.IsMatch(expectedresult, Brorsen );
         }
 
     }

@@ -7,7 +7,7 @@ using RestSharp;
 
 namespace NasaNecApiTestProject.NECService.HTTPManager
 {
-    class NECometsCallManager
+    public class NECometsCallManager
     {
         private readonly IRestClient client;
 
