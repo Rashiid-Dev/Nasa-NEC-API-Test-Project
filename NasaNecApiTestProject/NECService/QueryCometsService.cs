@@ -10,7 +10,7 @@ using Newtonsoft.Json.Linq;
 
 namespace NasaNecApiTestProject.NECService
 {
-    class SpecificCometService
+    class QueryCometsService
     {
         public NECometsCallManager neCometsCallManager = new NECometsCallManager();
 
@@ -23,9 +23,9 @@ namespace NasaNecApiTestProject.NECService
 
         public JArray json_file;
 
-        public SpecificCometService()
+        public QueryCometsService()
         {
-            nearEarthComets = neCometsCallManager.Get5DBrorsenComet();
+            nearEarthComets = neCometsCallManager.GetCometsWithEccentrictyGreaterThanSeven();
             neComets.DeserializeInfo(nearEarthComets);
             json_file = JsonConvert.DeserializeObject<JArray>(nearEarthComets);
         }
@@ -34,6 +34,5 @@ namespace NasaNecApiTestProject.NECService
         {
             return json_file[0];
         }
-
     }
 }

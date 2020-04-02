@@ -29,5 +29,12 @@ namespace NasaNecApiTestProject.NECService.HTTPManager
             var response = client.Execute(request, Method.GET);
             return response.Content;
         }
+
+        public string GetCometsWithEccentrictyGreaterThanSeven()
+        {
+            var request = new RestRequest(AppConfigReader.Resource + AppConfigReader.Where + "e > 0.07");
+            var response = client.Execute(request, Method.GET);
+            return response.Content;
+        }
     }
 }

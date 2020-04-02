@@ -8,9 +8,9 @@ using NUnit.Framework;
 
 namespace NasaNecApiTestProject.ApiServiceTests
 {
-    class SpecificCometTest
+    class CometsEccentricityTests
     {
-        private SpecificCometService specificCometService = new SpecificCometService();
+        private QueryCometsService queryCometsService = new QueryCometsService();
 
         private string _julianDate = "tp_tdb";
         private string _periphelion = "q_au_1";
@@ -25,10 +25,15 @@ namespace NasaNecApiTestProject.ApiServiceTests
         private string _objectName = "object_name";
 
         [Test]
-        public void Check5DBorsenObjectName()
+        public void CheckCometEccentricity()
         {
-            StringAssert.IsMatch("5D/Brorsen", (string)specificCometService.GetCometFirstInArray()[_objectName]);
+            StringAssert.IsMatch("0.682526943", (string)queryCometsService.GetCometFirstInArray()[_eccentricity]);
         }
 
+        [Test]
+        public void CheckCometEccentricityIsGreaterThanSeven()
+        {
+            Assert.AreEqual(true, (int)queryCometsService.GetCometFirstInArray()[_eccentricity] > 0.07);
+        }
     }
 }

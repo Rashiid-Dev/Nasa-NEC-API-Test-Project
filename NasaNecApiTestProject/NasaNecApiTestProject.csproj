@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiServiceTests\CometsEccentricityTests.cs" />
     <Compile Include="ApiServiceTests\NearEarthCometTests.cs" />
     <Compile Include="ApiServiceTests\SpecificCometTest.cs" />
     <Compile Include="AppConfigReader.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="NECService\DataHandling\NECometsModel.cs" />
     <Compile Include="NECService\HTTPManager\NECometsCallManager.cs" />
     <Compile Include="NECService\NearEarthCometsService.cs" />
+    <Compile Include="NECService\QueryCometsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NECService\SpecificCometService.cs" />
   </ItemGroup>
