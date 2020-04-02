@@ -22,5 +22,12 @@ namespace NasaNecApiTestProject.NECService.HTTPManager
             var response = client.Execute(request, Method.GET);
             return response.Content;
         }
+
+        public string Get5DBrorsenComet()
+        {
+            var request = new RestRequest(AppConfigReader.Resource + AppConfigReader.ObjectName + "5D/Brorsen");
+            var response = client.Execute(request, Method.GET);
+            return response.Content;
+        }
     }
 }
