@@ -30,9 +30,9 @@ namespace NasaNecApiTestProject.NECService
             json_file = JsonConvert.DeserializeObject<JArray>(nearEarthComets);
         }
 
-        public JToken GetCometFirstInArray()
+        public JToken GetComet(int cometno)
         {
-            return json_file[0];
+            return json_file[cometno];
         }
 
     }

@@ -27,13 +27,13 @@ namespace NasaNecApiTestProject.ApiServiceTests
         [Test]
         public void CheckCometEccentricity()
         {
-            StringAssert.IsMatch("0.682526943", (string)queryCometsService.GetCometFirstInArray()[_eccentricity]);
+            StringAssert.IsMatch("0.682526943", (string)queryCometsService.GetComet(0)[_eccentricity]);
         }
 
         [Test]
         public void CheckCometEccentricityIsGreaterThanSeven()
         {
-            Assert.AreEqual(true, (int)queryCometsService.GetCometFirstInArray()[_eccentricity] > 0.07);
+            Assert.AreEqual(true, (int)queryCometsService.GetComet(0)[_eccentricity] > 0.07);
         }
     }
 }

@@ -27,7 +27,7 @@ namespace NasaNecApiTestProject.ApiServiceTests
         [Test]
         public void Check5DBorsenObjectName()
         {
-            StringAssert.IsMatch("5D/Brorsen", (string)specificCometService.GetCometFirstInArray()[_objectName]);
+            StringAssert.IsMatch("5D/Brorsen", (string)specificCometService.GetComet(0)[_objectName]);
         }
 
     }

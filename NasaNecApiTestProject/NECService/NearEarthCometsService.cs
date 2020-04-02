@@ -32,15 +32,15 @@ namespace NasaNecApiTestProject.NECService
 
 
 
-        public JToken GetFirstComet()
+        public JToken GetComet(int cometno)
         {
-            return json_file[0];
+            return json_file[cometno];
         }
 
-        public JToken GetSecondComet()
-        {
-            return json_file[1];
-        }
+        //public JToken GetSecondComet()
+        //{
+        //    return json_file[1];
+        //}
 
 
     }
