@@ -32,17 +32,14 @@ namespace NasaNecApiTestProject.NECService
 
 
 
-
-        //public JToken GetCity()
-        //{
-
-        //    return json_forecast["name"];
-
-        //}
-
         public JToken GetFirstComet()
         {
             return json_file[0];
+        }
+
+        public JToken GetSecondComet()
+        {
+            return json_file[1];
         }
 
 
